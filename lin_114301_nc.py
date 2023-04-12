@@ -5,7 +5,7 @@ h = input().split()
 mnp = k
 
 
-for i in range (n - k + 1):
+for i in range(n - k + 1):
     psm = 0
     for j in range(k - 1):
         if int(h[j]) < int(h[j + 1]):
