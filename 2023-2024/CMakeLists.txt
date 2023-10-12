@@ -4,4 +4,4 @@ project(2023_2024)
 set(CMAKE_CXX_STANDARD 14)
 
 add_executable(2023_2024
-        sesc_2/sesc_2_B_rus.cpp)
+        rucode/rucode_4.cpp)
