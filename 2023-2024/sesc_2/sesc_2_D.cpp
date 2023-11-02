@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stack>
-#include <vector>
 #include <utility>
+#include <queue>
 
 
 int main() {
@@ -9,7 +9,7 @@ int main() {
     std::cin >> t >> n;
 
     std::pair<std::stack<long>, std::stack<long>> plate;
-    std::vector<long> results;
+    std::queue<long> results;
 
     for (register int i = 0; i < t; ++i) {
         register int command;
@@ -34,13 +34,14 @@ int main() {
                 plate.second.pop();
                 break;
             case 3:
-                results.push_back(plate.second.top());
+                results.push(plate.second.top());
         }
     }
 
     size_t resSize = results.size();
     for (register int i = 0; i < resSize; ++i) {
-        std::cout << results[i] << std::endl;
+        std::cout << results.front() << std::endl;
+        results.pop();
     }
 
     return 0;
