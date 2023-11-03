@@ -5,19 +5,22 @@
 
 
 int main() {
+    std::ios::sync_with_stdio(false);
+    std::cin.tie(nullptr);
+
     long t, n;
     std::cin >> t >> n;
 
     std::pair<std::stack<long>, std::stack<long>> plate;
     std::queue<long> results;
 
-    for (register int i = 0; i < t; ++i) {
-        register int command;
+    for (int i = 0; i < t; ++i) {
+        int command;
         std::cin >> command;
 
         switch (command) {
             case 1:
-                register long new_pancake;
+                long new_pancake;
                 std::cin >> new_pancake;
 
                 if (plate.first.empty()) {
@@ -33,14 +36,15 @@ int main() {
                 plate.first.pop();
                 plate.second.pop();
                 break;
-            case 3:
+            default:
                 results.push(plate.second.top());
         }
     }
 
     size_t resSize = results.size();
-    for (register int i = 0; i < resSize; ++i) {
-        std::cout << results.front() << std::endl;
+
+    for (int i = 0; i < resSize; ++i) {
+        std::cout << results.front() << "\n";
         results.pop();
     }
 
