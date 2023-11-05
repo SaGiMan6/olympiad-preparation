@@ -4,5 +4,5 @@ project(olympiad_preparation)
 set(CMAKE_CXX_STANDARD 17)
 
 add_executable(olympiad_preparation
-        2023-2024/sesc_1/sesc_1_H.cpp
+        2023-2024/sesc_2/sesc_2_E.cpp
 )
