@@ -8,8 +8,8 @@ int main() {
     // ios::sync_with_stdio(false);
 
 
-    ifstream in_file;
-    ofstream out_file;
+    ifstream input_file;
+    ofstream output_file;
     int a, b;
 
 
