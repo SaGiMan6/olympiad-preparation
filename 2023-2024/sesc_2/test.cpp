@@ -15,7 +15,7 @@ int main() {
     cout << numbers[x];
 
     // Указать размер hash map
-    numbers.reserve(300'000);
+    numbers.reserve(300);
 
     // Если такой эл. есть, возвращает 1, если нет, 0
     numbers.count(x);
